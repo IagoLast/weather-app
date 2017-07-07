@@ -1,0 +1,22 @@
+.Weather {
+  position: relative;
+  height: 100%;
+}
+
+.Weather .carousel > div {
+  height: 100%;
+  z-index: 0;
+}
+
+.Weather .carousel {
+  height: 100%;
+  width: 100%;
+}
+
+.Weather header {
+  position: absolute;
+}
+
+.Weather .carousel {
+  position: absolute;
+}

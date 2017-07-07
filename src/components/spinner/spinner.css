@@ -1,0 +1,8 @@
+.Spinner {
+  background-image: url(images/loader.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}

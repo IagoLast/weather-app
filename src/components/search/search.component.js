@@ -50,7 +50,7 @@ export default class Search extends Component {
             }) }
         </div>
         <footer>
-          <p> A project by @fannycasual & @iagolast</p>
+          <p> A project by Match&Go Labs</p>
           <p> Información meteorolóxica ofrecida pola AEMET.</p>
         </footer>
       </main>

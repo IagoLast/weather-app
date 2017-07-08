@@ -4,6 +4,10 @@
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	background-image: url('/images/bg.svg');
+	background-repeat: no-repeat;
+	background-position: 0% 85%;
+	background-size: contain;
 }
 
 .Search .Wrapper {
@@ -59,15 +63,17 @@
 }
 
 .Search footer {
-	padding: 15px;
-  font-size: 9px;
-  text-align: center;
+	padding: 25px;
+	font-size: 10px;
+	text-align: center;
 }
 
 .Search footer p {
 	display: block;
 	width: 100%;
-  margin-bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+	color: rgba(255, 255, 255, .8);
 }
 
 .Search footer a {

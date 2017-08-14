@@ -53,6 +53,7 @@
 }
 
 .Search .Suggestions a {
+	background: #FF9100;
 	color: white;
 	font-weight: 600;
 	font-size: 1.1em;

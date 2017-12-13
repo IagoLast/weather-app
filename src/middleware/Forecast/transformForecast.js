@@ -6,7 +6,7 @@ export default function(apiForecast) {
   dateTomorrow.setDate(dateToday.getDate() + 1);
 
   let today = _transformForecast(apiForecast.today, dateToday);
-  let tomorrow = _transformForecast(apiForecast.tomorrow, dateTomorrow);
+  let tomorrow = _transformForecast(apiForecast.tomorrow, dateTomorrow, true);
 
   let value = {
     name: apiForecast.name,
@@ -17,8 +17,8 @@ export default function(apiForecast) {
   return value;
 }
 
-function _transformForecast(apiForecast, date) {
-  let forecast = mapState(apiForecast.value);
+function _transformForecast(apiForecast, date, forceDay) {
+  let forecast = mapState(apiForecast.value, forceDay);
   forecast.date = date;
   forecast.description = apiForecast.description;
   forecast.tmp = apiForecast.tmp.current || Math.floor(((apiForecast.tmp.max + apiForecast.tmp.min) / 2));

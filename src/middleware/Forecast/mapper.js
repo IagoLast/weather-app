@@ -1,7 +1,12 @@
 import { CLOUDS, CLOUDS_N, CLOUDY, CLOUDY_N, RAIN, RAIN_N, LITTLE_RAIN, LITTLE_RAIN_N, STORM, STORM_N, SUNNY, SUNNY_N, SNOW, SNOW_N } from './states.js';
 
-export function mapState(state) {
-  const night = isNightTime();
+export function mapState(state, forceDay) {
+  let night;
+  if (forceDay) {
+    night = false;
+  } else {
+    night = isNightTime();
+  }
   switch (state) {
     case '13':
     case '14':

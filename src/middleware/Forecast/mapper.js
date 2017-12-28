@@ -57,8 +57,8 @@ export function mapState(state, forceDay) {
 }
 
 function isNightTime() {
-  let time = (new Date()).getHours()
-  return (time < 8 || time > 19)
+  let time = (new Date()).getHours();
+  return (time < 8 || time >= 18)
 }
 
 export default {

@@ -20,7 +20,7 @@ export default function(apiForecast) {
 function _transformForecast(apiForecast, date, forceDay) {
   let forecast = mapState(apiForecast.value, forceDay);
   forecast.date = date;
-  forecast.description = apiForecast.description;
+  // forecast.description = apiForecast.description;
   forecast.tmp = apiForecast.tmp.current || Math.floor(((apiForecast.tmp.max + apiForecast.tmp.min) / 2));
   forecast.max = apiForecast.tmp.max;
   forecast.min = apiForecast.tmp.min;

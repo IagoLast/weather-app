@@ -11,7 +11,7 @@ export const RAIN_N = {
   style: {
     background: 'radial-gradient(circle , #214F63 10%, #171D3C 100% )',
   },
-  description: 'Noite de Merda',
+  description: 'Vaste por coma un pito',
 };
 
 export const LITTLE_RAIN = {

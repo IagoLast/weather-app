@@ -19,7 +19,7 @@ export const LITTLE_RAIN = {
   style: {
     background: '#41a0e0',
   },
-  description: 'Ceo Rabudo',
+  description: 'Nunca choveu que non escampara',
   
 };
 
@@ -60,7 +60,7 @@ export const STORM_N = {
   style: {
     background: 'radial-gradient(circle , #214F63 10%, #171D3C 100% )'
   },
-  description: 'Trebón, Queda na casa',
+  description: 'Treboada esta noite',
 };
 
 export const CLOUDS = {
@@ -85,7 +85,7 @@ export const CLOUDY = {
   style: {
     background: '#b7e5d3'
   },
-  description: 'Malo será que chova',
+  description: 'Ceo cuberto',
 };
 
 export const CLOUDY_N = {
@@ -93,7 +93,7 @@ export const CLOUDY_N = {
   style: {
     background: 'radial-gradient(circle , #214F63 10%, #171D3C 100% )'
   },
-  description: 'Noite escura',
+  description: 'Noite tenebrosa',
   
 };
 
@@ -102,7 +102,7 @@ export const SNOW = {
   style: {
     background: '#f7ce94'
   },
-  description: 'Mellor poñer gorro e luvas',
+  description: 'Caen Folerpas',
 };
 
 export const SNOW_N = {

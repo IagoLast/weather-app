@@ -19,20 +19,27 @@ export default class DayForecast extends Component {
 
   share() {
     const url = `https://weather-app-e1234.firebaseapp.com/w/${this.props.id}`;
-    navigator.share ? this._shareNative(url) : this._sharePlugin(url);
+    this._sharePlugin()
+    // navigator.share ? this._shareNative(url) : this._sharePlugin();
   }
 
   reload() {
     window.location.reload(true);
   }
 
-  _sharePlugin(url) {
+  _sharePlugin() {
     if (window.plugins && window.plugins.socialsharing) {
-      window.plugins.socialsharing.shareWithOptions({ url });
+      navigator.screenshot.save((error, res) => {
+        if (error) {
+          return console.error(error);
+        }
+        window.plugins.socialsharing.share('A previsión do tempo', 'Trebo', `file://${res.filePath}`);
+      });
+
     }
   }
 
-  // Cant use this api due user-gesture limit
+  // Native share cant share images
   _shareNative(url) {
     navigator.share({
       title: 'Trebo',

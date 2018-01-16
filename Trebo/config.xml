@@ -23,5 +23,7 @@
     </platform>
     <icon src="res/icon.png" />
     <plugin name="cordova-plugin-geolocation" spec="^4.0.1" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="https://github.com/gitawego/cordova-screenshot.git" />
+    <plugin name="cordova-plugin-file" spec="^6.0.1" />
     <engine name="android" spec="^7.0.0" />
 </widget>

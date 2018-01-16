@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.matchandgo.trebo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Trebo</name>
-    <icon src="res/icon.png" />
-    <description>
-        O tempo en Galicia
-    </description>
+    <description> O tempo en Galiza</description>
     <author email="info@matchandgo.com" href="http://matchandgo.io">
-        Match and Go labs
+        Match and Go Labs
     </author>
-    <content src="index.html" />
+    <content src="https://weather-app-e1234.firebaseapp.com" />
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -17,7 +14,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <engine name="android" spec="~6.2.3" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
@@ -25,4 +21,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <engine name="android" spec="^7.0.0" />
 </widget>

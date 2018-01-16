@@ -3,7 +3,11 @@ body {
   max-width: 450px;
   margin: auto;
   will-change: transform;
-  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 * {

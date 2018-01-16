@@ -7,7 +7,7 @@ export function mapState(state, forceDay) {
   } else {
     night = isNightTime();
   }
-  switch (state) {
+  switch (state.replace(/\D/g, '')) {
     case '13':
     case '14':
       return night ? CLOUDS_N : CLOUDS;

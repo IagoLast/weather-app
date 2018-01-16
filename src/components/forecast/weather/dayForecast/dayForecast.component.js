@@ -18,8 +18,8 @@ export default class DayForecast extends Component {
   }
 
   share() {
-    const url = `https://weather-app-e1234.firebaseapp.com/w/${this.props.id}`;
     this._sharePlugin()
+    // const url = `https://weather-app-e1234.firebaseapp.com/w/${this.props.id}`;
     // navigator.share ? this._shareNative(url) : this._sharePlugin();
   }
 

@@ -6,7 +6,7 @@ import './dayForecast.css';
 export default class DayForecast extends Component {
   render() {
     return (
-      <Swipe delta={150} onSwipedDown={this.onSwipeDownListener} onSwipedUp={this.share.bind(this)} className="DayForecast" style={this.props.forecast.style}>
+      <Swipe delta={150} onSwipedDown={this.reload} onSwipedUp={this.share.bind(this)} className="DayForecast" style={this.props.forecast.style}>
         <h1>{this.props.forecast.description}</h1>
         <h5>{this._translateDate(this.props.date)}</h5>
         <img className="Meme" src={this.props.forecast.src} alt={this.props.forecast.description} />
@@ -19,8 +19,11 @@ export default class DayForecast extends Component {
 
   share() {
     const url = `https://weather-app-e1234.firebaseapp.com/w/${this.props.id}`;
-    this._sharePlugin(url);
-    // navigator.share ? this._shareNative(url) : this._sharePlugin(url);
+    navigator.share ? this._shareNative(url) : this._sharePlugin(url);
+  }
+
+  reload() {
+    window.location.reload(true);
   }
 
   _sharePlugin(url) {
@@ -28,7 +31,7 @@ export default class DayForecast extends Component {
       window.plugins.socialsharing.shareWithOptions({ url });
     }
   }
-  
+
   // Cant use this api due user-gesture limit
   _shareNative(url) {
     navigator.share({

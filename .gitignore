@@ -20,3 +20,4 @@ yarn-error.log*
 Trebo/platforms
 Trebo/plugins
 Trebo/node_modules
+Trebo/www/*

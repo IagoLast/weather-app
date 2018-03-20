@@ -57,8 +57,33 @@ export function mapState(state, forceDay) {
 }
 
 function isNightTime() {
-  let time = (new Date()).getHours();
-  return (time < 8 || time >= 18)
+  const time = (new Date()).getHours();
+  switch (new Date().getMonth()) {
+    case 0:
+      return (time < 9 || time >= 18)
+    case 1:
+      return (time < 9 || time >= 19)
+    case 2:
+      return (time < 8 || time >= 19)
+    case 3:
+      return (time < 8 || time >= 21)
+    case 4:
+      return (time < 7 || time >= 21)
+    case 5:
+      return (time < 7 || time >= 22)
+    case 6:
+      return (time < 7 || time >= 22)
+    case 7:
+      return (time < 7 || time >= 21)
+    case 8:
+      return (time < 8 || time >= 20)
+    case 9:
+      return (time < 8 || time >= 19)
+    case 10:
+      return (time < 9 || time >= 18)
+    case 11:
+      return (time < 9 || time >= 18)
+  }
 }
 
 export default {

@@ -34,7 +34,6 @@ const store = createStore(
 
 if (window.cordova) {
   document.addEventListener("deviceready", function() {
-    console.log('cordova loaded');
     init();
   }, false);
 } else {

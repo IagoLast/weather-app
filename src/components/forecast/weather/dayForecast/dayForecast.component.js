@@ -49,7 +49,7 @@ export default class DayForecast extends Component {
   }
 
   _translateDate(date) {
-    const days = ['Domingo', 'Lúns', 'Martes', 'Mércores', 'Xoves', 'Vernes', 'Sábado'];
+    const days = ['Domingo', 'Lúns', 'Martes', 'Mércores', 'Xoves', 'Venres', 'Sábado'];
     const months = [
       'Xaneiro',
       'Febreiro',

@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: '#FFF',
         paddingVertical: 15,
-        paddingHorizontal: 30
+        paddingHorizontal: 30, 
+        fontFamily: 'monserrat-bold',
     }
 });

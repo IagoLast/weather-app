@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ImageBackground, StyleSheet, Text, TextInput, View } from 'react-native';
 import Suggestions from './components/Suggestions';
 
 export default function Search(props) {
@@ -14,6 +14,7 @@ export default function Search(props) {
                         borderBottomWidth: 1,
                         padding: 10,
                         color: '#FFF',
+                        fontFamily: 'monserrat-bold'
                     }}
                     placeholderTextColor="rgba(255, 255, 255, 0.7)"
                     placeholder="Buscar un municipio"
@@ -23,19 +24,19 @@ export default function Search(props) {
 
 
             <View style={{ flex: 1 }}>
-                <Text style={{ fontSize: 18, color: 'rgba(255, 255, 255, 0.7)', paddingHorizontal: 30, marginBottom: 20 }}> Suxerencias </Text>
+                <Text style={{ fontFamily: 'monserrat', fontSize: 18, color: 'rgba(255, 255, 255, 0.7)', paddingHorizontal: 30, marginBottom: 20 }}> Suxerencias </Text>
                 <Suggestions query={query} />
             </View>
 
             <View>
-                <Image
+                <ImageBackground
                     source={require('../../assets/images/clouds.png')}
-                    style={{ height: 200 }}
+                    style={{ height: 180 }}
                     resizeMode="contain"
                 />
-                <View style={{ padding: 30 }}>
-                    <Text style={{ textAlign: 'center', color: '#FFF', fontSize: 12 }}> A project by Match&Go Labs </Text>
-                    <Text style={{ textAlign: 'center', color: '#FFF', fontSize: 12 }}> Información meteorolóxica ofrecida pola AEMET. </Text>
+                <View style={{ padding: 15 }}>
+                    <Text style={{ fontFamily: 'monserrat', textAlign: 'center', color: '#FFF', fontSize: 10 }}> A project by Match&Go Labs </Text>
+                    <Text style={{ fontFamily: 'monserrat', textAlign: 'center', color: '#FFF', fontSize: 10 }}> Información meteorolóxica ofrecida pola AEMET. </Text>
                 </View>
             </View>
         </View >

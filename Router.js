@@ -1,7 +1,7 @@
 import React from 'react';
 
 import locationService from './location.service';
-import Search from './screens/search/Search';
+import Search from './screens/Search/Search';
 import Forecast from './screens/Forecast/Forecast';
 
 

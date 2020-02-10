@@ -3,9 +3,9 @@ import { StyleSheet, View, Text, Image, Dimensions } from 'react-native';
 
 export default function Temperature(props) {
     return (
-        <View style={{flex: 1, justifyContent: 'space-between' }}>
+        <View style={{padding: 30, flex: 1, justifyContent: 'space-between' }}>
             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                <Text style={{ fontFamily: 'monserrat-bold', fontWeight: '900', fontSize: 52, color: '#fff' }}> 15º</Text>
+                <Text style={{ fontFamily: 'monserrat-bold', fontWeight: '900', fontSize: 64, color: '#fff' }}> 15º</Text>
             </View>
 
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', textAlign: 'center' }}>

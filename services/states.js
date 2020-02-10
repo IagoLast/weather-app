@@ -9,7 +9,7 @@ export const RAIN = {
 export const RAIN_N = {
     src: require('../assets/images/lluvia_n.gif'),
     style: {
-        background: '#214F63',
+        background: 'rgb(23, 29, 60)',
     },
     description: 'Vaste por coma un pito',
 };
@@ -26,7 +26,7 @@ export const LITTLE_RAIN = {
 export const LITTLE_RAIN_N = {
     src: require('../assets/images/llovizna_n.gif'),
     style: {
-        background: '#214F63',
+        background: 'rgb(23, 29, 60)',
     },
     description: 'Non esquezas o paraugas',
 };
@@ -42,7 +42,7 @@ export const SUNNY = {
 export const SUNNY_N = {
     src: require('../assets/images/sol_n.gif'),
     style: {
-        background: '#214F63'
+        background: 'rgb(23, 29, 60)'
     },
     description: 'Ceo estrelado',
 };
@@ -58,7 +58,7 @@ export const STORM = {
 export const STORM_N = {
     src: require('../assets/images/tormenta_n.gif'),
     style: {
-        background: '#214F63'
+        background: 'rgb(23, 29, 60)'
     },
     description: 'Treboada esta noite',
 };
@@ -74,7 +74,7 @@ export const CLOUDS = {
 export const CLOUDS_N = {
     src: require('../assets/images/nublado_n.gif'),
     style: {
-        background: '#214F63'
+        background: 'rgb(23, 29, 60)'
     },
     description: 'Lúa agochada',
 };
@@ -91,7 +91,7 @@ export const CLOUDY = {
 export const CLOUDY_N = {
     src: require('../assets/images/cubierto_n.gif'),
     style: {
-        background: '#214F63'
+        background: 'rgb(23, 29, 60)'
     },
     description: 'Noite tenebrosa',
 
@@ -108,7 +108,7 @@ export const SNOW = {
 export const SNOW_N = {
     src: require('../assets/images/nieve_n.gif'),
     style: {
-        background: '#214F63'
+        background: 'rgb(23, 29, 60)'
     },
     description: 'Coma na casa en ningún sitio',
 };

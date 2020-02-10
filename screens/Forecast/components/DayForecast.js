@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Dimensions, StyleSheet, View, TouchableWithoutFeedback, StatusBar } from 'react-native';
-import Header from './components/Header.js';
-import Weather from './components/Weather.js';
-import Temperature from './components/Temperature.js';
+import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 
+import Header from './components/Header.js';
+import Temperature from './components/Temperature.js';
+import Weather from './components/Weather.js';
+import NightBackground from './components/NightBackground.js';
 
 
 export default function Forecast(props) {
@@ -15,7 +16,8 @@ export default function Forecast(props) {
 
     return (
         <TouchableWithoutFeedback onPressIn={() => setIsHover(true)} onPressOut={() => setIsHover(false)}>
-            <View style={{ height: '100%', padding: 30, backgroundColor: props.forecast.style.background }}>
+            <View style={{ height: '100%', width: '100%', backgroundColor: props.forecast.style.background }}>
+                {props.forecast.style.background == 'rgb(23, 29, 60)' ? <NightBackground /> : null}
                 <Header name={props.forecast.name} nextDay={props.nextDay} />
                 {
                     isHover
@@ -24,7 +26,7 @@ export default function Forecast(props) {
                 }
 
             </View >
-        </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback >
     );
 }
 

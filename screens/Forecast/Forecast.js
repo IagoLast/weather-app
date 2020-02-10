@@ -4,6 +4,7 @@ import AppIntroSlider from 'react-native-app-intro-slider';
 
 import DayForecast from './components/DayForecast';
 import weatherService from '../../services/weather.service';
+import Spinner from '../../components/Spinner/Spinner';
 
 export default function Forecast(props) {
     const slides = [{ key: '0' }, { key: '1' }]
@@ -15,7 +16,7 @@ export default function Forecast(props) {
 
 
     if (!forecast.name) {
-        return <View><Text> Loading...</Text></View>
+        return <Spinner />
     }
 
     slides[0].forecast = forecast.today;

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useEffect, useState } from 'react';
 import AppIntroSlider from 'react-native-app-intro-slider';
-
-import DayForecast from './components/DayForecast';
-import weatherService from '../../services/weather.service';
 import Spinner from '../../components/Spinner/Spinner';
+import weatherService from '../../services/weather.service';
+import DayForecast from './components/DayForecast';
+
 
 export default function Forecast(props) {
     const slides = [{ key: '0' }, { key: '1' }]

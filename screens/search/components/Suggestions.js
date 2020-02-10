@@ -1,18 +1,18 @@
 import React from 'react';
 import locations from './locations';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import Suggestion from './Suggestion';
 
 export default function Suggestions(props) {
 
     if (props.query.length < 2 || !props.query) {
         return (
-            <View>
+            <ScrollView>
                 <Suggestion name="Pontevedra" id="36038" />
                 <Suggestion name="A Coruña" id="15030" />
                 <Suggestion name="Lugo" id="27028" />
                 <Suggestion name="Ourense" id="32054" />
-            </View>
+            </ScrollView>
         )
     }
 
@@ -25,8 +25,8 @@ export default function Suggestions(props) {
     }
 
     return (
-        <View>
+        <ScrollView>
             {suggestions.map(({ name, id }) => <Suggestion id={id} name={name} key={id} />)}
-        </View>
+        </ScrollView>
     );
 }

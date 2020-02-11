@@ -21,7 +21,7 @@ export default function Forecast(props) {
                 <Header name={props.forecast.name} nextDay={props.nextDay} />
                 {
                     isHover
-                        ? <Temperature description={props.forecast.description} image={props.forecast.src} />
+                        ? <Temperature {...props.forecast} />
                         : <Weather description={props.forecast.description} image={props.forecast.src} />
                 }
 

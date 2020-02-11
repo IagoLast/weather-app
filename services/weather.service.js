@@ -1,9 +1,19 @@
+import cache from 'memory-cache';
 import mapper from './mapper';
 
+const FIVE_MINUTES = 5 * 60 * 1000;
+
 export function getWeather(id) {
+    if (cache.get(id)) {
+        return Promise.resolve(cache.get(id));
+    }
     return fetch(`https://meteosapi-server.herokuapp.com/api/v1/simple/${id}`)
         .then(response => response.json())
-        .then(apiForecastToInternalForecast);
+        .then(response => {
+            const forecast = apiForecastToInternalForecast(response);
+            cache.put(id, forecast, FIVE_MINUTES);
+            return forecast;
+        });
 }
 
 function apiForecastToInternalForecast(apiForecast) {

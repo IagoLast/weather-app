@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View, Dimensions } from 'react-native';
 
 import Header from './components/Header.js';
 import Temperature from './components/Temperature.js';
@@ -14,9 +14,11 @@ export default function Forecast(props) {
         return null;
     }
 
+    const height = (typeof document != 'undefined') ? Dimensions.get('window').height : '100%';
+
     return (
         <TouchableWithoutFeedback onPressIn={() => setIsHover(true)} onPressOut={() => setIsHover(false)}>
-            <View style={{ height: '100%', width: '100%', backgroundColor: props.forecast.style.background }}>
+            <View style={{ height, width: '100%', backgroundColor: props.forecast.style.background }}>
                 {props.forecast.style.background == 'rgb(23, 29, 60)' ? <NightBackground /> : null}
                 <Header name={props.forecast.name} nextDay={props.nextDay} />
                 {

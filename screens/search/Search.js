@@ -6,17 +6,17 @@ export default function Search(props) {
     const [query, setQuery] = useState('');
     return (
         <View style={styles.container}>
-            <View style={{ paddingTop: 60, paddingLeft: 30, paddingRight: 30, marginBottom: 60 }}>
+            <View style={{ paddingHorizontal: 30, paddingTop: 60, paddingBottom: 50 }}>
                 <TextInput
                     style={{
                         fontSize: 20,
-                        borderBottomColor: 'rgba(255, 255, 255, 0.7)',
+                        borderBottomColor: 'rgba(255, 255, 255, 0.5)',
                         borderBottomWidth: 1,
                         padding: 10,
                         color: '#FFF',
                         fontFamily: 'monserrat-bold'
                     }}
-                    placeholderTextColor="rgba(255, 255, 255, 0.7)"
+                    placeholderTextColor="rgba(255, 255, 255, 0.5)"
                     placeholder="Buscar un municipio"
                     onChangeText={setQuery}
                 />

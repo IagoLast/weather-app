@@ -1,10 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableHighlight } from 'react-native';
-import locationService from '../../../location.service';
 
 export default function Search(props) {
     return (
-        <TouchableHighlight onPress={() => { locationService.navigateTo(`/${props.id}`) }} style={styles.suggestion}>
+        <TouchableHighlight underlayColor="rgb(218, 124, 0)" onPress={() => props.onClick({ ...props })} style={styles.suggestion}>
             <Text style={styles.suggestionText}> {props.name} </Text>
         </TouchableHighlight>
     );
@@ -17,14 +16,14 @@ const styles = StyleSheet.create({
     },
     suggestion: {
         borderBottomWidth: 1,
-        borderBottomColor: '#FFF',
+        borderBottomColor: '#ffffff80',
     },
     suggestionText: {
         fontWeight: 'bold',
-        fontSize: 24,
+        fontSize: 22,
         color: '#FFF',
         paddingVertical: 15,
-        paddingHorizontal: 30, 
+        paddingHorizontal: 30,
         fontFamily: 'monserrat-bold',
     }
 });

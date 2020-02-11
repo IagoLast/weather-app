@@ -5,6 +5,7 @@ import weatherService from '../../services/weather.service';
 import DayForecast from './components/DayForecast';
 
 
+
 export default function Forecast(props) {
     const slides = [{ key: '0' }, { key: '1' }]
     const [forecast, setForecast] = useState({});
@@ -21,9 +22,8 @@ export default function Forecast(props) {
     slides[0].forecast = forecast.today;
     slides[1].forecast = forecast.tomorrow;
 
-
     return (
-        <AppIntroSlider hidePagination={true} style={{ height: '100%' }} showNextButton={false} showDoneButton={false} renderItem={_renderItem} slides={slides} />
+        <AppIntroSlider hidePagination={true} showNextButton={false} showDoneButton={false} renderItem={_renderItem} slides={slides} />
     );
 }
 
